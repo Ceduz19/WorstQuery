@@ -1,0 +1,28 @@
+package com.github.ceduz19.worstquery.spi;
+
+/**
+ * Constructs whose support differs between the supplied dialect baselines.
+ */
+public enum Feature {
+    RIGHT_JOIN,
+    FULL_JOIN,
+    INTERSECT_ALL,
+    EXCEPT_ALL,
+    ALTER_COLUMN_TYPE,
+    ADD_CONSTRAINT,
+    DROP_CONSTRAINT,
+    WINDOW_RANGE_OFFSET,
+    WINDOW_GROUPS,
+    NESTED_WITH,
+    ORDER_BY_IN_SUBQUERY,
+    CREATE_TABLE_IF_NOT_EXISTS,
+    CREATE_INDEX_IF_NOT_EXISTS,
+    DROP_TABLE_IF_EXISTS,
+    DROP_INDEX_IF_EXISTS,
+    ALTER_TABLE_IF_EXISTS,
+    ADD_COLUMN_IF_NOT_EXISTS,
+    DROP_COLUMN_IF_EXISTS,
+    MODIFY_COLUMN_IF_EXISTS,
+    ADD_CONSTRAINT_IF_NOT_EXISTS,
+    DROP_CONSTRAINT_IF_EXISTS
+}
