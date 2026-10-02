@@ -1,0 +1,31 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+max_line_length = 120
+
+[*.java]
+ij_java_continuation_indent_size = 8
+ij_java_if_brace_force = always
+ij_java_for_brace_force = always
+ij_java_while_brace_force = always
+ij_java_do_while_brace_force = always
+ij_java_keep_control_statement_in_one_line = false
+ij_java_keep_simple_methods_in_one_line = false
+ij_java_keep_simple_blocks_in_one_line = false
+ij_java_method_parameters_wrap = normal
+ij_java_call_parameters_wrap = normal
+ij_java_method_call_chain_wrap = normal
+ij_java_binary_operation_wrap = normal
+ij_java_keep_blank_lines_in_code = 1
+ij_java_keep_blank_lines_in_declarations = 1
+ij_java_class_count_to_use_import_on_demand = 999
+ij_java_names_count_to_use_import_on_demand = 999
+
+[*.md]
+trim_trailing_whitespace = false

@@ -1,0 +1,43 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.github.ceduz19.worstquery'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    withSourcesJar()
+    withJavadocJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 17
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.encoding = 'UTF-8'
+    options.addBooleanOption('Xdoclint:all,-missing', true)
+    options.addStringOption('-show-packages', 'exported')
+    options.addStringOption('sourcepath', file('src/main/java').absolutePath)
+    exclude '**/internal/**'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'org.xerial:sqlite-jdbc:3.46.1.0'
+}
+
+test {
+    useJUnitPlatform()
+    modularity.inferModulePath = false
+}
